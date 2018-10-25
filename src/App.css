@@ -2,14 +2,21 @@
   box-sizing: border-box;
 }
 
+html{
+  height: 100%;
+}
+
 body{
   background: #333;
+  background-image: linear-gradient(135deg,#b0337a, #16878c);
   color: #eee;
   line-height: 1;
+  height: 100%;
 }
 
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
 .App-logo {
@@ -33,18 +40,25 @@ body{
 }
 
 .Calculator{
-  border: 1px solid #eee;
+  background: rgba(0,0,0,.3);
   width: 400px;
-  height: 500px;
+  height: 600px;
   display: flex;
   margin: auto;
   flex-wrap: wrap;
 }
 
+.Buttons{
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+  margin: 15px;
+  justify-content: space-between;
+}
+
 .Number,.Operator{
-  width: 25%;
-  height: 100px;
-  border: 1px solid #eee;
+  width: 22%;
+  height: 80px;
   cursor: pointer;
   transition: all ease-in-out .3s;
   transform: scale(1);
@@ -53,28 +67,31 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(0,0,0,.3);
+  margin-bottom: 10px;
 }
 
 .Number:hover,.Operator:hover{
-  transform: scale(1.1);
+  transform: scale(1.15);
   z-index: 1;
 }
 
-.Number{
+/* .Number{
   background: #dada26;
 }
 
 .Operator{
   background: #5ec5c5;
-}
+} */
 
 .screen{
   height: 100px;
   width: 100%;
-  background: #6de66d;
+  background: rgba(0,0,0,.3);
   font-size: 60px;
   padding: 15px;
   padding-bottom: 25px;
+  margin: 15px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
