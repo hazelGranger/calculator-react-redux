@@ -76,6 +76,10 @@ body{
   z-index: 1;
 }
 
+.Number:active,.Operator:active{
+  background-image: linear-gradient(135deg,#b0337a, #16878c)
+}
+
 /* .Number{
   background: #dada26;
 }
