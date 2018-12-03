@@ -1,3 +1,10 @@
+import * as math from 'mathjs'
+
+math.config({
+    number: 'BigNumber',
+    precision: 16
+})
+
 const curValue = (state = "0", action) => {
   switch (action.type) {
     case "INPUT_NUMBER":
@@ -15,14 +22,14 @@ const curValue = (state = "0", action) => {
     case "CALCULATION":
       switch (action.operator) {
         case "+":
-          return (parseFloat(action.prevValue) + parseFloat(state)) + ""
+          return `${math.eval(action.prevValue + "+" + state)}`
           break;
         case "-":
-          return (parseFloat(action.prevValue) - parseFloat(state)) + ""
+          return `${math.eval(action.prevValue + "-" + state)}`
         case "x":
-          return (parseFloat(action.prevValue) * parseFloat(state)) + ""
+          return `${math.eval(action.prevValue + "x" + state)}`
         case "÷":
-          return (parseFloat(action.prevValue) / parseFloat(state)) + ""
+          return `${math.eval(action.prevValue + "/" + state)}`
         case "=":
           return state
         default:

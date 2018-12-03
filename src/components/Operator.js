@@ -22,6 +22,8 @@ class Operator extends Component {
       this.props.setCurNumberToPrev(this.props.curValue)
       this.props.prepareInputNumber()
     } else {
+
+
       new Promise( resolve => {
 
         this.props.calculation(this.props.prevValue,this.props.curOperator)
