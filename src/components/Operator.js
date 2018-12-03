@@ -26,10 +26,7 @@ class Operator extends Component {
 
         this.props.calculation(this.props.prevValue,this.props.curOperator)
         resolve(this.props.value)
-        console.log("b", this.props.curValue);
       }).then( (operator) => {
-
-        console.log("c", this.props.curValue);
         // console.log(operator,curValue);
         this.props.inputOperator(operator)
         this.props.setCurNumberToPrev(this.props.curValue)

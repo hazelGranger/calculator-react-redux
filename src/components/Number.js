@@ -20,15 +20,12 @@ class Number extends Component {
   }
 
   render(){
-    if (this.props.type && this.props.type === "signChanger") {
-      return(
-        <div className="Number" onClick={ this.handleChangeSign }>{this.props.value}</div>
-      )
-    } else{
-      return(
-        <div className="Number" onClick={ this.handleClick }>{this.props.value}</div>
-      );
-    }
+    console.log(this.props);
+    return this.props.type && this.props.type === "signChanger" ? (
+      <div className="Number" onClick={ this.handleChangeSign }>{this.props.value}</div>
+    ) : (
+      <div className="Number" onClick={ this.handleClick }>{this.props.value}</div>
+    )
   }
 }
 
